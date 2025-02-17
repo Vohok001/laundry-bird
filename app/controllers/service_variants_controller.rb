@@ -1,0 +1,3 @@
+class ServiceVariantController < ApplicationController
+  
+end

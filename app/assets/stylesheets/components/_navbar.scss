@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #14102b;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+.navbar-logo {
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.logo {
+  height: 80px;
+}
+
+
+
+.menu ul {
+  list-style: none; /* Removes default bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Aligns menu items horizontally */
+  gap: 15px; /* Spacing between items */
+}
