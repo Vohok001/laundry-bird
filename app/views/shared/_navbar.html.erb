@@ -1,21 +1,49 @@
-<div class="navbar">
+<div class="navbar-container">
+
   <div class="navbar-logo">
     <%= link_to root_path do %>
       <%= image_tag 'logo_lb.png', class: "logo" %>
     <% end %>
-
   </div>
-  <div class="menu">
-    <ul class="navbar-links">
-      <li><a href="<%= root_path %>">Home</a></li>
-      <li><a href="<%= how_it_works_path %>">How it works</a></li>
-      <li><a href="<%= services_path %>">Services</a></li>
-      <li><a href="<%= about_path %>">About us</a></li>
-      <% if user_signed_in? %>
-        <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete } %>
-      <% else %>
-        <li><a href="<%= new_user_session_path  %>"> Login</a></li>
-      <% end %>
-    </ul>
+
+  <div class="navabar-menu">
+    <div class="navbar"data-controller="navbar">
+      <div>
+        <button class="hamburger-menu" data-action="click->navbar#toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav>
+          <ul class="navbar-links hidden" data-navbar-target="menu">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "How it works", how_it_works_path %></li>
+            <li><%= link_to "Services", services_path %></li>
+            <li><%= link_to "About us", about_path %></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="nav-btn">
+        <% if user_signed_in? %>
+
+            <%= link_to destroy_user_session_path, method: :delete, data: { turbo_method: :delete } do %>
+              <i class="fa-solid fa-circle-user"></i>
+            <% end %>
+
+        <% else %>
+
+            <%= link_to new_user_session_path do %>
+              <i class="fa-solid fa-circle-user"></i>
+            <% end %>
+
+        <% end %>
+
+        <a href="<%= root_path %>"><i class="fa-solid fa-cart-plus"></i></a>
+      </div>
+
+
+    </div>
+
+
   </div>
 </div>
