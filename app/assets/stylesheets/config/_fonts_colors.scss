@@ -13,3 +13,9 @@ $bodyFont: "Bitter", serif;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
 
 $heroFont: "Bitter", serif;
+
+body{
+  h1,h2,h3,h4,h5,p{
+    font-family: $bodyFont;
+  }
+}

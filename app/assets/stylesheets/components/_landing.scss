@@ -1,0 +1,240 @@
+/* Step by step */
+.steps{
+  height: 35rem;
+  width: 80%;
+  margin: 2rem;
+  background-color: $light-blue;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.6rem;
+  h1{
+    text-align: center;
+    padding: 3rem;
+  }
+}
+.landing-steps {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 350px;
+  align-items: center;
+  text-align: center;
+}
+.image-container{
+  img{
+  width: 15vw;
+  height: 16vh;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  object-position: top;
+}
+}
+
+/* Benefits */
+.thin-banner{
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.benefits {
+  width: 80%;
+  height: auto;
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.25rem;
+  background-color: $red;
+  border-radius: 0.6rem;
+  box-shadow: 0px 0.25rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+
+.benefit-box {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover{
+    transform: translateY(-0.3125rem);
+    box-shadow: 0px 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+  }
+  i{
+    font-size: 2.5rem;
+    color: $mustard;
+    margin-right: 1.25rem;
+  }
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h4{
+    font-size: 1.125rem;
+    margin-bottom: 0.3rem;
+  }
+}
+
+/* Target customer*/
+
+.tgt-container {
+  width: 100vw;
+  max-height: 43rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem 0rem;
+
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $dark-teal;
+    margin-bottom: 2rem;
+  }
+
+  .tgt-card {
+    height: 100%;
+    width: 80%;
+    margin: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.6rem;
+
+
+    .tgt-customers {
+      .accordion-item {
+        border: none;
+        margin-bottom: 0.5rem; /* 8px */
+
+        .accordion-button {
+          background: $teal;
+          color: white;
+          border-radius: 0.3125rem;
+          transition: all 0.3s ease;
+          padding: 1rem;
+          h4{
+            font-size: 1rem;
+          }
+          h5{
+            font-size: 1.5rem;
+          }
+          &:hover {
+            background: $mustard;
+          }
+          &:focus {
+            box-shadow: none;
+          }
+        }
+
+        .accordion-body {
+          padding: 0.5rem;
+          color: $dark-teal;
+          font-family: $bodyFont;
+        }
+      }
+    }
+
+    .customer-img {
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 30rem;
+        object-fit: cover;
+        border-radius: 0.5rem;
+      }
+    }
+
+  }
+}
+
+
+/*Responsiveness for mobile devices*/
+@media (max-width: 860px) {
+  .banner{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .steps{
+   width: 100%;
+   margin: 0;
+   height: auto;
+     h1{
+     font-size: 2rem;
+     padding: 1rem;
+   }
+ }
+ .landing-steps{
+    display: inline;
+ }
+ .image-container{
+    border-top: 1rem solid white;
+    height: auto;
+    margin-bottom: 1rem;
+  img{
+    width: auto;
+  }
+ }
+
+ .benefits{
+  display: block;
+  margin: 0;
+  padding:0;
+  width: 100%;
+ }
+ .benefit-box {
+  margin: 1rem;
+ }
+ .tgt-container{
+  margin-top: 17rem;
+  h1{
+    font-size: 1.5rem;
+  }
+  .tgt-card{
+    margin: 0;
+    width: 100%;
+  }
+ }
+ .customer-img {
+  display: none;
+}
+.tgt-customers{
+  width: 100%;
+}
+.accordion-button{
+  height: 4rem;
+  text-align: left;
+  h4{
+    font-size: 0.75rem;
+  }
+  h3{
+    font-size: 1.2rem;
+  }
+}
+}
+
+
+
+@media (min-width: 861px) and (max-width: 1780px) {
+
+  .customer-img{
+    img{
+      height: 30rem;
+    }
+  }
+
+}

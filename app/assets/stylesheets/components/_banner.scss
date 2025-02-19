@@ -1,12 +1,14 @@
 .banner{
   height: 38rem;
   width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 .hero{
   height: 30rem;
   width: 80%;
-  margin: 5rem;
-  background-color: #B4C4C3;
+  margin: 2rem;
+  background-color: $mustard;
   display: flex;
   justify-content: space-between;
 
@@ -29,7 +31,7 @@
   flex-wrap: wrap;
   h1{
     font-size: 5rem;
-    color: white;
+    color: $dark-teal;
     font-family: $bodyFont;
     display: flex;
     justify-content:center;
@@ -49,6 +51,7 @@
 @media (max-width: 820px) {
   .banner{
     max-width: 820px;
+    height: auto;
   }
  .hero{
   height: 15rem;
@@ -70,6 +73,7 @@
 @media (min-width: 821px ) and (max-width: 1024px){
   .banner{
     max-width: 1024px;
+    height: auto;
   }
   .hero{
     button{
@@ -96,3 +100,4 @@
   }
  }
 }
+

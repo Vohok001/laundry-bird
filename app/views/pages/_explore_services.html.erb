@@ -1,0 +1,73 @@
+
+
+  <div class="explore-services">
+    <div class="explore-card">
+      <h1>Explore our services</h1>
+      <p>Your clothes deserve the best care, and we’re here to provide it. Whether it's a regular wash, delicate dry cleaning, or ironing, we treat each garment with the utmost attention. Enjoy the convenience of free delivery and expert care—because your time is valuable.</p>
+      <h2>Ready to make your laundry easier?</h2>
+      <%= link_to "Explore pricing", services_path %>
+    </div>
+
+    <div class="service-items">
+      <div class="service-item">
+        <%= link_to services_path(:wash) do %>
+          <div class="service-content">
+            <%= image_tag 'wash.png', alt: 'washing machine' %>
+            <div class="service-text">
+              <h4>Wash & Dry</h4>
+              <p>Mixed wash for everyday laundry.</p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="service-item">
+        <%= link_to services_path(:wash_and_iron) do %>
+          <div class="service-content">
+            <%= image_tag 'wash-iron.png', alt: 'washing machine and iron' %>
+            <div class="service-text">
+              <h4>Wash & Iron</h4>
+              <p>Mixed wash for everyday laundry and ironing.</p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="service-item">
+        <%= link_to services_path(:dry_clean) do %>
+          <div class="service-content">
+            <%= image_tag 'dry-clean.png', alt: 'dry cleaned suit' %>
+            <div class="service-text">
+              <h4>Dry Clean</h4>
+              <p>Professional dry cleaning for all kinds of garments.</p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="service-item">
+        <%= link_to services_path(:ironing) do %>
+          <div class="service-content">
+            <%= image_tag 'iron.png', alt: 'iron' %>
+            <div class="service-text">
+              <h4>Ironing</h4>
+              <p>Ironing service for all kinds of items.</p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="service-item">
+        <%= link_to services_path(:duvet) do %>
+          <div class="service-content">
+            <%= image_tag 'duvet.png', alt: 'duvet' %>
+            <div class="service-text">
+              <h4>Duvets & Bulky items</h4>
+              <p>For heavy duty items requiring extra care.</p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
