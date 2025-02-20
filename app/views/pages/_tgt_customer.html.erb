@@ -1,30 +1,10 @@
 <h1>From Laundry to Leisure <br> Spend Your Free Time Doing What You Love</h1>
 
 <div class="tgt-card">
-  <!-- Customer Types -->
+
   <div class="tgt-customers col-md-6 ">
     <div class="accordion" id="customerAccordion">
 
-      <!-- Families (expanded by default) -->
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#familyCollapse" aria-expanded="true" aria-controls="familyCollapse"
-            data-image="<%= asset_path('family.jpg') %>">
-            <div>
-              <h4>PERFECT FOR</h4>
-              <h3>Families</h3>
-            </div>
-          </button>
-        </div>
-        <div id="familyCollapse" class="accordion-collapse collapse show" data-bs-parent="#customerAccordion">
-          <div class="accordion-body">
-            Let us take care of the washing, so you can focus on the memories.
-          </div>
-        </div>
-      </div>
-
-      <!-- Businesses -->
       <div class="accordion-item">
         <div class="accordion-header">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -43,7 +23,6 @@
         </div>
       </div>
 
-      <!-- Professionals -->
       <div class="accordion-item">
         <div class="accordion-header">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -63,7 +42,6 @@
         </div>
       </div>
 
-      <!-- Individuals -->
       <div class="accordion-item">
         <div class="accordion-header">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -82,10 +60,27 @@
         </div>
       </div>
 
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#familyCollapse" aria-expanded="true" aria-controls="familyCollapse"
+          data-image="<%= asset_path('family.jpg') %>">
+          <div>
+            <h4>PERFECT FOR</h4>
+            <h3>Families</h3>
+          </div>
+        </button>
+      </div>
+      <div id="familyCollapse" class="accordion-collapse collapse show" data-bs-parent="#customerAccordion">
+        <div class="accordion-body">
+          Let us take care of the washing, so you can focus on the memories.
+        </div>
+      </div>
+    </div>
+
     </div>
   </div>
 
-  <!-- Image Section -->
   <div class="customer-img col-md-6 ">
     <img src="<%= asset_path('family.jpg') %>" alt="Family" id="customer-image">
   </div>
@@ -93,14 +88,13 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".accordion-button"); // Get all accordion buttons
-    const image = document.getElementById("customer-image"); // Get the image element
+    const buttons = document.querySelectorAll(".accordion-button");
+    const image = document.getElementById("customer-image");
 
-    // Loop through all buttons and add event listeners
     buttons.forEach(button => {
       button.addEventListener("click", function () {
-        const newImageSrc = this.getAttribute("data-image"); // Get the image URL from data-image attribute
-        image.src = newImageSrc; // Change the image src
+        const newImageSrc = this.getAttribute("data-image");
+        image.src = newImageSrc;
       });
     });
   });

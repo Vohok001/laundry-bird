@@ -113,17 +113,16 @@
     overflow: hidden;
     box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
     border-radius: 0.6rem;
-
+    // background: $teal;
 
     .tgt-customers {
       .accordion-item {
         border: none;
-        margin-bottom: 0.5rem; /* 8px */
+        margin-bottom: 0.5rem;
 
         .accordion-button {
           background: $teal;
           color: white;
-          border-radius: 0.3125rem;
           transition: all 0.3s ease;
           padding: 1rem;
           h4{
@@ -150,10 +149,10 @@
 
     .customer-img {
       height: 100%;
-
       img {
+        margin-left: 1rem;
         width: 100%;
-        height: 30rem;
+        height: 31rem;
         object-fit: cover;
         border-radius: 0.5rem;
       }
@@ -161,6 +160,7 @@
 
   }
 }
+
 
 
 /*Responsiveness for mobile devices*/
